@@ -1,0 +1,42 @@
+[
+    {
+        "Id": 1, 
+        "Name": "Employee 1",
+        "Department": "Accounts",
+        "EmployeeNumber": "E001", 
+        "showEditButton":false,
+        "savedButtonClicked":false
+    },
+   {
+        "Id": 2, 
+        "Name": "Employee 2",
+        "Department": "Accounts",
+        "EmployeeNumber": "E002", 
+        "showEditButton":false,
+        "savedButtonClicked":false
+    },
+    {
+        "Id": 3, 
+        "Name": "Employee 3",
+        "Department": "Deposit",
+        "EmployeeNumber": "E003", 
+        "showEditButton":false,
+        "savedButtonClicked":false
+    },
+    {
+        "Id": 4, 
+        "Name": "Employee 4",
+        "Department": "Deposit",
+        "EmployeeNumber": "E004", 
+        "showEditButton":false,
+        "savedButtonClicked":false
+    },
+    {
+        "Id": 5, 
+        "Name": "Employee 5",
+        "Department": "Withdrawal",
+        "EmployeeNumber": "E005", 
+        "showEditButton":false,
+        "savedButtonClicked":false
+    }
+]

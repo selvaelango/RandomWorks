@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" data-ng-app="wApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Table Row Editing</title>
+    
+    <!-- Latest compiled and minified CSS -->
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" 
+                              integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+                        
+      <link rel="stylesheet" href="bootstrap-select/css/bootstrap-select.css">
+                     
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+      
+      <script src="bootstrap-select/js/bootstrap-select.js"></script>
+  
+                          
+      <script type="text/javascript">
+            (function (employeeWrapper) {
+                  employeeWrapper.jsonStructure = { "Id": 0,"Name": "","Department": "","EmployeeNumber": "",  "showEditButton": false, "savedButtonClicked": false};
+            }(window.employeeWrapper = window.employeeWrapper || {}));
+      </script>
+</head>
+<body>
+      
+    
+      
+     <data-ng-include 
+	src="'templates/tpl-Employee.html'"></data-ng-include>
+    
+     <!--angular script reference-->
+     <script src="js/angular1.5.7.min.js" type="text/javascript"></script>
+     
+     <!--injecting: module-->
+     <script src="app/module.js" type="text/javascript"></script>
+    
+    <!--injecting: controllers-->
+     <script src="app/controller/employee.controller.js" type="text/javascript"></script>
+     
+     <!--injecting:services-->
+      <script src="app/services/employeeInfo.services.js" type="text/javascript"></script>
+</body>
+</html>

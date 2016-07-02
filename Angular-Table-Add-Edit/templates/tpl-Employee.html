@@ -1,0 +1,50 @@
+<div data-ng-controller="employeeListController as lc"> 
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-3">
+                Name
+            </div>
+            <div class="col-xs-3">
+                Department
+            </div>
+            <div class="col-xs-3">
+                EmployeeNumber
+            </div>
+            <div class="col-xs-3">
+                
+            </div>
+        </div>
+        <div class="row" data-ng-repeat="eL in lc.EmployeeInfoLists track by $index">
+            <div class="col-xs-3">
+                <span data-ng-hide="eL.showEditButton" data-ng-bind="eL.Name"></span>
+                <input type="text" data-ng-show="eL.showEditButton" data-ng-model="eL.Name" />
+            </div>
+            <div class="col-xs-3">
+                <span data-ng-hide="eL.showEditButton"  data-ng-bind="eL.Department"></span>
+                <div data-render-dropdown data-ng-show="eL.showEditButton">
+                    <select class="selectpicker" data-ng-model="eL.Department"  >
+                        <option selected value="">--Select--</option>
+                        <option value="Accounts">Accounts</option>
+                        <option value="Deposit">Deposit</option>
+                        <option value="Withdrawal">Withdrawal</option>
+                    </select>
+                 </div>
+            </div>
+            <div class="col-xs-3">
+                <span data-ng-hide="eL.showEditButton"  data-ng-bind="eL.EmployeeNumber"></span>
+                <input type="text" data-ng-show="eL.showEditButton" data-ng-model="eL.EmployeeNumber" />
+            </div>
+            <div class="col-xs-3">
+                <button class="btn-primary" class="btnEdit" data-ng-hide="eL.showEditButton" data-ng-click="lc.editEmployeeelection(eL, $index)" >Edit</button>
+                <button class="btn-primary" data-ng-show="eL.showEditButton" data-ng-click="lc.saveEmployeeelection($index)">save</button>
+                <button class="btn-primary" data-ng-show="eL.showEditButton" data-ng-click="lc.cancelEmployeeelection($index)">cancel</button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12">
+                <button class="btn-primary" data-ng-click="lc.addKid(lc.selected, lc.EmployeeInfoLists.length+1)" 
+                    data-ng-disabled="lc.isAddButtonEnabled">Add</button>
+            </div>
+        </div>
+    </div>
+</div>
