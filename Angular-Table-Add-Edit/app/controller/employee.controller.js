@@ -4,9 +4,7 @@
     
     var Initialize = function (employeeService, $scope, $filter) {
         var vm = this;
-        
-        vm.name = "Load...";
-        
+                
         vm.EmployeeInfoLists = [];
         
         vm.Name = "";

@@ -21,7 +21,7 @@
             </div>
             <div class="col-xs-3">
                 <span data-ng-hide="eL.showEditButton"  data-ng-bind="eL.Department"></span>
-                <div data-render-dropdown data-ng-show="eL.showEditButton">
+                <div data-render-dropdown data-Deparment="eL.Department" data-ng-show="eL.showEditButton">
                     <select class="selectpicker" data-ng-model="eL.Department"  >
                         <option selected value="">--Select--</option>
                         <option value="Accounts">Accounts</option>
@@ -35,7 +35,7 @@
                 <input type="text" data-ng-show="eL.showEditButton" data-ng-model="eL.EmployeeNumber" />
             </div>
             <div class="col-xs-3">
-                <button class="btn-primary" class="btnEdit" data-ng-hide="eL.showEditButton" data-ng-click="lc.editEmployeeelection(eL, $index)" >Edit</button>
+                <button class="btn-primary btnEdit" data-ng-hide="eL.showEditButton" data-ng-click="lc.editEmployeeelection(eL, $index)" >Edit</button>
                 <button class="btn-primary" data-ng-show="eL.showEditButton" data-ng-click="lc.saveEmployeeelection($index)">save</button>
                 <button class="btn-primary" data-ng-show="eL.showEditButton" data-ng-click="lc.cancelEmployeeelection($index)">cancel</button>
             </div>
